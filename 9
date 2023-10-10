@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class Main
+{
+public static void main(String[] args)
+{
+Scanner scanner = new Scanner(System.in);
+System.out.print("N (длина): ");
+int N = scanner.nextInt();
+System.out.print("M (ширина): ");
+int M = scanner.nextInt();
+System.out.print("x до длинного бортика: ");
+int x = scanner.nextInt();
+System.out.print("y до короткого бортика: ");
+int y = scanner.nextInt();
+// Рассчитываем минимальное расстояние для каждого из четырех случаев
+int minDist = Math.min(Math.min(x, N - x), Math.min(y, M - y));
+System.out.println("Минимальное расстояние для выбора бортика: " + minDist + " метров");
+}
+}
